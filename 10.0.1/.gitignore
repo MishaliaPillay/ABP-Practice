@@ -9,4 +9,6 @@ aspnet-core/src/PracticeProject.Web.Mvc/App_Data/Logs/
 aspnet-core/src/PracticeProject.Migrator/Logs/Logs.txt
 aspnet-core/build/outputs/
 aspnet-core/docker/mvc/Mvc-Logs/
+aspnet-core\src\PracticeProject.Migrator\appsettings.json
+aspnet-core\src\PracticeProject.Web.Host\appsettings.json
 
