@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PracticeProject.EntityFrameworkCore;
 
@@ -11,9 +12,11 @@ using PracticeProject.EntityFrameworkCore;
 namespace PracticeProject.Migrations
 {
     [DbContext(typeof(PracticeProjectDbContext))]
-    partial class PracticeProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250403080938_New table")]
+    partial class Newtable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1663,7 +1666,7 @@ namespace PracticeProject.Migrations
                     b.Property<bool?>("IsCompleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsDeleted")
+                    b.Property<bool?>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("LastModificationTime")
