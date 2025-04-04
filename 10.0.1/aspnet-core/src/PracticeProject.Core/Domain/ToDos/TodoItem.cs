@@ -15,4 +15,9 @@ namespace PracticeProject.Domain.ToDos
         public bool? IsCompleted { get; set; }
     }
 
+    public class TodoItemSLA : TodoItem
+    {
+        public DateTime? ExpectedCompletion { get; set; }
+    }
+
 }

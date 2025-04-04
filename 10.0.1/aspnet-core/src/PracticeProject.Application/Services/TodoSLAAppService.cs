@@ -1,28 +1,26 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
-using Microsoft.AspNetCore.Authorization;
 using PracticeProject.Domain.ToDos;
 using PracticeProject.Services.Dtos;
 
 namespace PracticeProject.Services
 {
     [AbpAllowAnonymous]
-    public class TodoAppService : AsyncCrudAppService<TodoItem, TodoItemDto, Guid>
-    {
-        public TodoAppService(IRepository<TodoItem, Guid> repository)
+    public class TodoSLAAppService : AsyncCrudAppService<TodoItemSLA, TodoItemDtoSLA, Guid>
+    { 
+        public TodoSLAAppService(IRepository<TodoItemSLA, Guid> repository)
     : base(repository)
         {
         }
 
-
-
+        public override Task<TodoItemDtoSLA> CreateAsync(TodoItemDtoSLA input)
+        {
+            return base.CreateAsync(input);
+        }
     }
 
 }
