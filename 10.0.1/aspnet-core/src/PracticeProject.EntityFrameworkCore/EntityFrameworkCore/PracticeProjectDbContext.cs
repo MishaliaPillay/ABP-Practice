@@ -16,6 +16,7 @@ public class PracticeProjectDbContext : AbpZeroDbContext<Tenant, Role, User, Pra
     public DbSet<TodoItem> TodoItems { get; set; }
     public DbSet<Vehicle> Vehicles { get; set; }
     public DbSet<Product> Products { get; set; }
+    public DbSet<TodoItemSLA> todoItemSLAs { get; set; }
     public PracticeProjectDbContext(DbContextOptions<PracticeProjectDbContext> options)
         : base(options)
     {
